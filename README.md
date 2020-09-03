@@ -1,4 +1,4 @@
-# optimization-examples
+# SAS Optimization Examples
 
 ## Overview
 
@@ -22,4 +22,4 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## Additional Resources
 
-For more examples see the SAS optimization documentation and especially the SAS OPtimization Exmples Book.
+For more examples see the SAS optimization documentation and especially the SAS Optimization Examples Book.

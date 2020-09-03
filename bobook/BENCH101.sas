@@ -4,7 +4,7 @@ https://github.com/sassoftware/optimization-examples
 */
 /*
 
-Examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)" by John M. Wilson and Josef Kallrath.
+Examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)" by Josef Kallrath.
 
 Park bench manufacturing, first problem (Exercise 10.1).
 

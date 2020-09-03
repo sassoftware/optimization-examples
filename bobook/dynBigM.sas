@@ -4,7 +4,7 @@ https://github.com/sassoftware/optimization-examples
 */
 /*
 
-Examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)" by John M. Wilson and Josef Kallrath.
+Examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)" by Josef Kallrath.
 
 Dynamic Reduction of Big-M Coefficients (section 14.1.2.1).
 

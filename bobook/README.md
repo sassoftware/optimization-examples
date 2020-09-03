@@ -2,4 +2,4 @@
 
 ## Overview
 
-This folder contains many examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)".
+This folder contains many examples from the book "Business Optimisation: Using Mathematical Programming (2nd Edition)" by John M. Wilson and Josef Kallrath.

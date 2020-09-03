@@ -1,4 +1,4 @@
-# optimization-examples - Business Optimisation Book Examples
+# SAS Optimization Examples - Business Optimisation Book Examples
 
 ## Overview
 

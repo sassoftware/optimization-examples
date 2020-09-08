@@ -81,3 +81,22 @@ proc optmodel;
    print Subtour;
    print {i in VERTICES, j in VERTICES: Use[i,j].sol > 0.5} Use;
 quit;
+
+/* 
+This is an alternative, SAS-specific, way to solve this problem using the SAS built-in TSP solver.
+*/
+proc optmodel;
+   /* Declare the input data. */
+   set <num,num> LINKS;
+   num distance{LINKS};
+   read data distance_data into LINKS=[from to] distance;
+   print distance;
+
+   /* Solve the problem. */
+   set <num,num> TOUR;
+   solve with network / tsp links=(weight=distance) out=(tour=TOUR);
+
+   /* Print the optimal solution. */
+   put TOUR=;
+   print {<i,j> in TOUR} distance;
+quit;

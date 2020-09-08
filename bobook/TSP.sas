@@ -71,7 +71,7 @@ proc optmodel;
       sum {j in VERTICES: i ne j} Use[i,j] = 1;
 
    /* Subtour elimination constraints. */
-   con SubtourElemination{i in VERTICES, j in VERTICES: i > 1 && j > 1 && i ne j}:
+   con SubtourElimination{i in VERTICES, j in VERTICES: i > 1 && j > 1 && i ne j}:
       Subtour[i] - Subtour[j] + (card(VERTICES) - 1)*Use[i,j] <= card(VERTICES) - 2;
 
    /* Solve the problem, the MILP solver is selected automatically. */

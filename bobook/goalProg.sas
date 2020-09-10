@@ -21,24 +21,31 @@ proc optmodel;
    max Obj1 = 5*X + 2*Y - 20;
 
    /* Solve with the first objective. */
-   solve obj Obj1;
+   solve;
 
    /* Add the first target constraint with a relative target. */
-   con Obj1Con: 5*X + 2*Y - 20 >= Obj1.sol - abs(10/100 * Obj1.sol);
+   num Obj1sol;
+   Obj1sol = Obj1.sol;
+   con Obj1Con: Obj1 >= Obj1sol - abs(10/100 * Obj1sol);
 
    /* Declare the second objective. */
    min Obj2 = -3*X + 15*Y - 48;
 
-   /* Solve with the second objective. */
+   /* Solve with the second objective.
+      Note that we don't need to specify the objective since the last 
+      objective declared is used by default. We still do it for emphasis.*/
    solve obj Obj2;
 
    /* Add the second target constraint with an absolute target. */
-   con Obj2Con: -3*X + 15*Y - 48 <= Obj2.sol + 4;
+   num Obj2sol;
+   Obj2sol = Obj2.sol;
+   con Obj2Con: Obj2 <= Obj2sol + 4;
 
    /* Declare the third objective. */
    max Obj3 = 1.5*X + 21*Y - 3.8;
 
-   /* Solve with the third objective. */
+   /* Solve with the third objective. 
+      Note that the same holds here, i.e. we specify the Obj3 for emphasis.*/
    solve obj Obj3;
 
    /* Print out the solution and the three objective values for this solution. */

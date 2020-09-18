@@ -1,4 +1,4 @@
-/* Copyright © 2020, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
+/* Copyright Â© 2020, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.
 SPDX-License-Identifier: Apache-2.0
 https://github.com/sassoftware/optimization-examples
 */
@@ -44,7 +44,7 @@ proc optmodel;
    con AllJobs {j in JOBS}:
       sum {i in JOBS} Assign[i, j] = 1;
 
-   /* All position need to be used. */
+   /* All positions need to be used. */
    con AllPositions {i in JOBS}:
       sum {j in JOBS} Assign[i, j] = 1;
 

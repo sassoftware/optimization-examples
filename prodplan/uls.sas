@@ -5,7 +5,7 @@ https://github.com/sassoftware/optimization-examples
 /*
 This is a basic example of uncapacitated lot-sizing using the basic formulation.
 
-See the file uls_extended.sas for an extended formulation for the same problem.
+See the file uls_ext.sas for an extended formulation for the same problem.
 */
 
 /* This code generates the input data for an uncapacitated lot-sizing problem instance. */

@@ -61,6 +61,9 @@ proc optmodel;
     for later.*/
     con flow_balance{t in PERIODS}:
         (if (t > 1) then Store[t-1]) + Produce[t] = demand[t] + Store[t];
+        
+    /* We assume that the final stock is constant. Setting it to 0.*/
+    fix Store[card(PERIODS)] = 0;
 
     /* The variable upper bound constraints.  How tight this constraint is depends on the bound we put on
        the Produce variables. If we use a good bound, it is tighter, a generic big M results in looser

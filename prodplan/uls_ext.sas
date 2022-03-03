@@ -67,7 +67,7 @@ proc optmodel;
    /* The objective function. Using the impvars here to make it easier. OPTMODEL calculates the new costs for us. */
    min total_cost = sum{t in PERIODS} (variable_cost[t] * Produce[t] + fixed_cost[t] * Use[t] + store_cost[t] * Store[t]);
 
-   /* Solve with the milp solver. This will run out of memory if numPeriods gets to big. */
+   /* Solve with the milp solver. This will run out of memory if numPeriods gets too big. */
    solve with milp;
 
    /* Print the optimal solution and the demand. */

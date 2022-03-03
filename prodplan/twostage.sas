@@ -8,9 +8,9 @@ This is a two-stage production planning example that tries to be somewhat realis
 Setup: A company has two sets of machines. All products are created on one of the first machines and then
 finished on the second set of machines.
 
-Input is a list of orders and their due date. There can be multiple orders for the same product with different due dates.
+Input is a list of orders and their due dates. There can be multiple orders for the same product with different due dates.
 
-The first stage machines have a fixed output per time period. All order have to be multiples of that number (no waste).
+The first stage machines have a fixed output per time period. All orders have to be multiples of that number (no waste).
 
 There is one inventory that stores both products between stage1 and stage2 and final products.
 
@@ -150,7 +150,7 @@ proc optmodel;
       sum{s in STATES} Use_Stage2[t,m,s] <= 1;
 
    /* If we change products, we need to have one CHANGE period.
-      Note that is allows keeping a machine set up for a product but not producing (stage 2 only).
+      Note that this allows keeping a machine set up for a product but not producing (stage 2 only).
    */
    con changeover_stage1{t in PERIODS, p in PRODUCTS, m in MACHINES_STAGE1: t > 1}:
       Use_Stage1[t,m,p] + Use_Stage1[t,m,"CHANGE"] >= Use_Stage1[t-1,m,p];

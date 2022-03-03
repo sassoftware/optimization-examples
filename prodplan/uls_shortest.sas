@@ -88,8 +88,8 @@ proc optmodel;
    for {<so, si, o, f, t> in PATHS} do;
       produce[f] = demand_between[f,t];
       use[f] = 1;
-      for {i in PERIODS: f <= i AND i < t}
-         store[i]=demand_between[i+1,t];
+      for {i in f..t-1}
+         store[i] = demand_between[i+1,t];
    end;
 
    /* Print the optimal solution and the demand. */

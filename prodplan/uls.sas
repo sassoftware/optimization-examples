@@ -46,7 +46,7 @@ proc optmodel;
 
    /* The decision variables. */
    /* How many items should be produced in time period t. */
-   /* Note that is correct to just put a "big M" as bound on the Produce variables.
+   /* Note that it is correct to just put a "big M" as bound on the Produce variables.
       But that would not result in a good, tight formulation. The tight bound
       can be computed as the demand in all remaining periods (we never have to
       produce more than that). */
@@ -57,10 +57,10 @@ proc optmodel;
    var Store{PERIODS} >= 0;
 
    /* The flow balance constraints. We make sure that the amount in storage plus
-   the production in each each period match the demand plus anything that is stored
+   the production in each period matches the demand plus anything that is stored
    for later.*/
    con flow_balance{t in PERIODS}:
-      (if (t > 1) then Store[t-1]) + Produce[t] = demand[t] + Store[t];
+      (if (t-1 in PERIODS) then Store[t-1]) + Produce[t] = demand[t] + Store[t];
 
    /* We assume that the final stock is constant. Setting it to 0.*/
    fix Store[card(PERIODS)] = 0;

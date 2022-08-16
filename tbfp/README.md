@@ -1,4 +1,4 @@
-# SAS Optimization Examples - Mathematical Programming Examples
+# SAS Optimization Examples
 
 ## Overview
 

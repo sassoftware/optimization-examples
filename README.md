@@ -22,4 +22,4 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## Additional Resources
 
-For more examples see the SAS optimization documentation. The examples in the mpex directory are from the SAS Optimization Examples Book available as part of the SAS documentation here: https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/ormpex/titlepage.htm
+For more examples see the SAS Optimization documentation. The examples in the mpex directory are from the SAS Optimization Examples Book available as part of the SAS documentation here: https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/ormpex/titlepage.htm

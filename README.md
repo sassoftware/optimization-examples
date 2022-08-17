@@ -6,7 +6,7 @@ This project hosts example code for SAS optimization procedures.
 
 ### Prerequisites
 
-Running this code requires a SAS environment and a license for SAS/OR or SAS Optimimzation for Viya. Some of the examples can also be run on Viya using the runOptmodel action.
+Running this code requires a SAS environment and a license for SAS/OR or SAS Optimization for Viya. Some of the examples can also be run on Viya using the runOptmodel action.
 
 ### Installation
 
